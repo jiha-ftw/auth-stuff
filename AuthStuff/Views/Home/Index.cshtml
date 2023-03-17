@@ -1,0 +1,14 @@
+﻿
+<h2>Welcome</h2>
+
+@(User.Identity.IsAuthenticated ? "L" : "Not l")ogged in!
+
+<p>
+    <a href="/login?scheme=Auth0">Login Auth0</a>
+</p>
+
+<p>
+    <a href="/login?scheme=OpenIdConnect">Login AD</a>
+</p>
+
+
