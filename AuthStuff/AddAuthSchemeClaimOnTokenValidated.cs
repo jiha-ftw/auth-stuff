@@ -9,7 +9,6 @@ namespace AuthStuff
         {
             OnTokenValidated = context => 
             {
-                var claimsIdentity = (ClaimsIdentity)context.Principal.Identity;
                 ((ClaimsIdentity)context.Principal.Identity).AddClaim(new Claim(".AuthScheme", scheme));
             
                 return Task.CompletedTask;
