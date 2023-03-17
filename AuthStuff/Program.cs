@@ -33,7 +33,6 @@ builder.Services.AddAuthorization(options =>
         .Build();
 });
 
-
 builder.Services.AddAuthentication(options => {
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
