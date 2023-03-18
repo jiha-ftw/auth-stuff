@@ -10,7 +10,7 @@ namespace AuthStuff
             OnTokenValidated = context => 
             {
                 ((ClaimsIdentity)context.Principal.Identity).AddClaim(new Claim(".AuthScheme", scheme));
-            
+
                 return Task.CompletedTask;
             }
         };
