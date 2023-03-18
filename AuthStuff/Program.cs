@@ -11,7 +11,8 @@ builder.Services
 
 var app = builder.Build();
 
-app.UseAuthentication()
+app
+    .UseAuthentication()
     .UseRouting()
     .UseAuthorization()
     .SetupRoutes();
