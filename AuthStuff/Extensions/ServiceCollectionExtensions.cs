@@ -31,7 +31,7 @@ namespace AuthStuff.Extensions
             return services;
         }
 
-        public static IServiceCollection SetupAuthentication(this IServiceCollection services)
+        public static IServiceCollection SetupAuthorization(this IServiceCollection services)
         {
             services.AddAuthorization(options =>
             {
@@ -45,7 +45,7 @@ namespace AuthStuff.Extensions
             return services;
         }
 
-        public static IServiceCollection SetupAuthorization(this IServiceCollection services)
+        public static IServiceCollection SetupAuthentication(this IServiceCollection services)
         {
             services.AddAuthentication(options =>
             {
