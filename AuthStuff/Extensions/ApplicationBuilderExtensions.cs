@@ -5,7 +5,7 @@ using System.Security.Claims;
 
 namespace AuthStuff.Extensions
 {
-    public static class WebapplicationExtensions
+    public static class ApplicationBuilderExtensions
     {
         public static IApplicationBuilder SetupRoutes(this IApplicationBuilder app)
         {
