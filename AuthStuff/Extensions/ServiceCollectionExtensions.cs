@@ -13,7 +13,7 @@ namespace AuthStuff.Extensions
             services.AddMicrosoftIdentityWebAppAuthentication(configurationRoot);
 
             return services.Configure<MicrosoftIdentityOptions>(OpenIdConnectDefaults.AuthenticationScheme, options =>
-                options.Events = AddAuthSchemeClaimOnTokenValidated.Create(OpenIdConnectDefaults.AuthenticationScheme)
+                options.Events = AddAuthSchemeClaimOnTokenValidated.Create()
             );
         }
 
@@ -25,7 +25,7 @@ namespace AuthStuff.Extensions
                 options.ClientId = configurationRoot["Auth0:ClientId"];
                 options.CookieAuthenticationScheme = "auth0";
                 options.Domain = configurationRoot["Auth0:Domain"];
-                options.OpenIdConnectEvents = AddAuthSchemeClaimOnTokenValidated.Create(Auth0Constants.AuthenticationScheme);
+                options.OpenIdConnectEvents = AddAuthSchemeClaimOnTokenValidated.Create();
             });
 
             return services;
